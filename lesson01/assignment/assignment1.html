@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 1: Boxes and Submit Buttons</title>
+  <style>
+    h1 {
+    color: purple;
+    }
+    button {
+      background-color: gray;
+      color: white;
+      padding: 0.5em;
+    }
+    p {
+      padding-top: 1em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Lesson 1: Boxes and Submit Buttons</h1>
+  <!-- First pair of input boxes and submit button -->
+  <p>Input 1: To reverse numbers, enter a list of numbers seperated by commas</p>
+  <div>
+    <input type="text" id="input1" placeholder="Enter a list of numbers seperated by commas">
+    <!-- Submit for Input -->
+    <button id="submit1">Submit</button>
+    <!-- Output of first pair -->
+    <p id="output1"></p>
+  </div>
+  
+  <!-- Second pair of input boxes and submit button -->
+  <p>Input 2: To see all numbers greater than input, enter a number</p>
+  <div>
+    <input type="number" id="input2" placeholder="Enter a number">
+    <!-- Submit for Input -->
+    <button id="submit2">Submit</button>
+    <!-- Output of second pair -->
+    <p id="output2"></p>
+  </div>
+  
+  
+  <!-- Third pair of input boxes and submit button -->
+  <p>Input 3: To see uppercase input, enter some text</p>
+  <div>
+    <input type="text" id="input3" placeholder="Enter a string">
+    <!-- Submit for Input -->
+    <button id="submit3">Submit</button>
+    <!-- Output of third pair -->
+    <p id="output3"></p>
+  </div>
+  
+  <!-- Fourth pair of input boxes and submit button -->
+  <p>Input 4: To see reversed sentence, enter some text</p>
+  <div>
+    <input type="text" id="input4" placeholder="Enter a sentence">
+      <!-- Submit for Input -->
+      <button id="submit4">Submit</button>
+      <!-- Output of fourth pair -->
+      <p id="output4"></p>
+    </div>
+
+  <script>
+ // Function to split user input into an array and reverse it
+ document.getElementById('submit1').addEventListener('click', function() {
+      const input = document.getElementById('input1').value;
+      const numbersArray = input.split(',').map(num => parseFloat(num.trim()));
+      const reverseArray = numbersArray.reverse();
+      document.getElementById('output1').textContent = `Reversed: [${reverseArray}]`;
+    });
+
+    // Function to filter numbers greater than user input from array
+    document.getElementById('submit2').addEventListener('click', function() {
+      const userInput = parseInt(document.getElementById('input2').value);
+      const defaultArray = [10, 20, 30, 40, 50];
+      const filterArray = defaultArray.filter(num => num > userInput);
+      document.getElementById('output2').textContent = `Numbers greater than ${userInput}: [${filterArray}]`;
+    });
+
+    // Function to change user input string to uppercase
+    document.getElementById('submit3').addEventListener('click', function() {
+      const input = document.getElementById('input3').value;
+      const uppercaseString = input.toUpperCase();
+      document.getElementById('output3').textContent = `Uppercased Text: ${uppercaseString}`;
+    });
+
+    // Function to split user input sentence into words and reverse each word
+    document.getElementById('submit4').addEventListener('click', function() {
+      const input = document.getElementById('input4').value;
+      const wordsArray = input.split(' ');
+      const reversedWords = wordsArray.map(word => word.split('').reverse().join(''));
+      document.getElementById('output4').textContent = `Reversed Sentence: ${reversedWords.join(' ')}`;
+    });
+  </script>
+
+
+  </script>
+
+</body>
+</html>
