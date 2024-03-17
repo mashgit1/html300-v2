@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 1: Boxes and Submit Buttons</title>
+</head>
+
+<body>
+
+  <!-- First pair of input boxes and submit button -->
+  <div>
+    <input type="text" id="input1" placeholder="Input 1">
+    <!-- Submit for Input -->
+    <button onclick="submitForm(1)">Submit</button>
+    <!-- Output of third pair -->
+    <p id="output1"></p>
+  </div>
+  
+  <!-- Second pair of input boxes and submit button -->
+  <div>
+    <input type="text" id="input2" placeholder="Input 2">
+    <!-- Submit for Input -->
+    <button onclick="submitForm(2)">Submit</button>
+    <!-- Output of third pair -->
+    <p id="output2"></p>
+  </div>
+  
+  <!-- Third pair of input boxes and submit button -->
+  <div>
+    <input type="text" id="input3" placeholder="Input 3">
+    <!-- Submit for Input -->
+    <button onclick="submitForm(3)">Submit</button>
+    <!-- Output of third pair -->
+    <p id="output3"></p>
+  </div>
+  
+  <!-- Fourth pair of input boxes and submit button -->
+  <div>
+    <input type="text" id="input4" placeholder="Input 4">
+    <!-- Submit for Input -->
+    <button onclick="submitForm(4)">Submit</button>
+    <!-- Output of third pair -->
+    <p id="output4"></p>
+  </div>
+
+  <script>
+    // Function to for form submission for each pair
+    function submitForm(index) {
+      // Get value of input for pair
+      const input = document.getElementById(`input${index}`).value;
+
+      // Manipulate input value using ES6+ array and string methods
+      // Split input string into array of characters, reverse order of array elements, and then join array elements back into a string
+      const reversedInput = input.split('').reverse().join('');
+
+      // Get length of input string to count the number of characters
+      const charCount = input.length;
+
+      // Convert input string to uppercase
+      const capitalizedInput = input.toUpperCase();
+
+      // Output manipulated data
+      const outputElement = document.getElementById(`output${index}`);
+      outputElement.textContent = `Reversed: ${reversedInput}, Character Count: ${charCount}, Capitalized: ${capitalizedInput}`;
+    }
+  </script>
+
+</body>
+</html>
