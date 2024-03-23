@@ -7,11 +7,54 @@ html {
 *:before {
     box-sizing: inherit;
 }
-
 .main {
     padding: 2rem;
+    background-color: $background-color;
 }
 
-h1 {
-    color: $red;
+.card {
+    border: 20px solid $primary-color;
+    padding: 20px;
+    box-sizing: border-box; 
+    width: 50%;
+
+    .employee-info {
+        display: flex;
+        flex-direction: row;
+        color: $primary-color;
+
+        .employee-header {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-right: 20px; 
+
+            img {
+                width: 150px; 
+                border-radius: 50%;
+            }
+        }
+
+        .employee-info-text {
+            margin-left: 10px;
+        }
+
+        .employee-details {
+            flex: 1; 
+            color: $primary-color;
+        }
+        p.logo-text {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .gray-background {
+        background-color: #f0f0f0; 
+        padding: 20px;
+    }
+
+    h1, p, h2 {
+        color: swatch darken;
+    }
 }

@@ -1,0 +1,108 @@
+/* Import partials here */
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
+
+// Variables
+$transition-duration: 0.3s;
+$hover-scale-factor: 1.1;
+
+// Transition mixin
+@mixin transition($properties...) {
+  transition: $properties $transition-duration ease-in-out;
+}
+
+// Hover effect mixin
+@mixin hover-scale($factor) {
+  &:hover {
+    transform: scale($factor);
+  }
+}
+
+/* Formatting for site */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Structure for nav menu */
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+/* Formatting for nav menu items */
+nav ul li {
+    background-color: #eae2d5f0;
+    border: 1px solid #746e57f0;
+    border-radius: 5px;
+    color: rgba(249, 246, 246, 0.776);
+    margin: 5px; 
+    flex: 1 0 auto; 
+    padding: 15px;
+    @include transition(transform); // Apply transition to transform property
+    @include hover-scale($hover-scale-factor); // Apply hover effect to scale the item
+}
+
+/* Implement nav hover color */
+nav ul li:hover {
+    background-color: #e9e5e5; 
+    transform: scale(1.1); 
+}
+
+/* Remove underlines from nav links */
+.nav-links {
+    text-decoration: none;
+}
+
+/* Container for the header elements */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* Formatting for header image */
+img {
+    width: 75%;
+}
+h1{
+    padding: 0px;
+}
+/* Formatting for main content */
+.content {
+    padding: 0.5em;
+}
+/* Placing image beside text */
+.image-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; 
+    padding: 5em;
+    background-color: rgb(193, 182, 163);
+}
+
+/* Ensure image does not exceed container width */
+.image-container img {
+    max-width: 35%;
+    margin-right: 20px; 
+}
+
+/* Formatting for footer */
+footer {
+    text-align: center;
+    background-color: rgb(239, 233, 222);
+    padding: 1em;
+    display: block; 
+    position: relative;
+    width: 100%;
+  }
