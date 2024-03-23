@@ -4,3 +4,76 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// Sets primary color to gray
+$primary-color: gray; 
+// Sets background color to white
+$background-color: white; 
+
+// Sets text color to gray
+h1 {
+    color: $primary-color;
+}
+
+
+// Formats card
+.card {
+    padding: 20px;
+    box-sizing: border-box; 
+    max-width: 50%;
+
+    .employee-card {
+        border: 20px solid $primary-color;
+        padding: 20px;
+        margin-bottom: 20px; 
+    }
+
+
+    // Formats intro employee text
+    .employee-info {
+        display: flex;
+        flex-direction: row;
+        color: $primary-color;
+        
+
+        .employee-header {
+            align-items: center;
+            flex-direction: column;
+            margin-right: 20px;   
+            
+            img {
+                width: 150px; 
+                border-radius: 50%;
+            }
+        }
+
+        .employee-info-text {
+            margin-left: 10px;
+        }
+
+        .employee-details {
+            flex: 1; 
+            color: $primary-color;
+            margin-left: 20px; 
+
+            p {
+                gap: .25rem;
+            }   
+        }
+    }
+
+    p.logo-text {
+        display: flex;
+        align-items: center;
+    }
+    .gray-background {
+        background-color: #f0f0f0; 
+        padding: 20px;
+ 
+    }
+
+    // Darken the primary color by 10%
+    h1, p, h2 {
+        color: darken($primary-color, 10%); 
+    }
+    
+}
