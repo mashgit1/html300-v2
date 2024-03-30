@@ -1,6 +1,127 @@
-// Import partials here
+/* Import partials here */
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
 
+/* General styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+header img {
+  width: 75%;
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+/* Container for the header elements */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+/* Structure for nav menu */
+nav {
+  text-align: center;
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+}
+
+/* Formatting for nav menu items */
+nav ul li {
+  background-color: #eae2d5f0;
+  border: 1px solid #746e57f0;
+  border-radius: 5px;
+  color: rgba(249, 246, 246, 0.776);
+  margin: 5px; 
+  flex: 1 0 auto; 
+  padding: 15px;
+  @include transition(transform); // Apply transition to transform property
+  @include hover-scale($hover-scale-factor); // Apply hover effect to scale the item
+}
+
+/* Implement nav hover color */
+nav ul li:hover {
+  background-color: #e9e5e5; 
+  transform: scale(1.1); 
+}
+
+.nav-links {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Main layout styles */
+main {
+  display: grid;
+  grid-template-columns: 200px 1fr; /* Sidebar and main content columns */
+  gap: 20px;
+  padding: 20px;
+}
+
+aside {
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.content {
+  background-color: #fff;
+  padding: 0.5em;
+}
+
+/* Placing image beside text */
+.image-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; 
+  padding: 5em;
+  background-color: rgb(193, 182, 163);
+}
+
+/* Ensure image does not exceed container width */
+.image-container img {
+  max-width: 35%;
+  margin-right: 20px; 
+}
+
+/* Formatting for footer */
+footer {
+  text-align: center;
+  padding: 1em;
+  display: block; 
+  position: relative;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Media query for responsive layout */
+@media screen and (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr; 
+  }
+
+  aside {
+    grid-column: 1 / -1;
+    margin-bottom: 20px; 
+  }
+}
