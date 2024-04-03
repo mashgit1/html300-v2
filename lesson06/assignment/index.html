@@ -1,15 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 06 - Bootstrap 4</title>
-    </head>
-    <body>
-        <main class="main">
-          
-        </main>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Coffee Project</title>
+</head>
+<body>
+  <header>
+    <h1>Coffee Project</h1>
+    <img src="images/top-view-tasty-coffee-with-coffee-beans.jpg" alt="top view coffee with coffee beans">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="history.html">Images</a></li>
+                <li class="nav-item"><a class="nav-link" href="comparison.html">Accordion</a></li>
+                <li class="nav-item"><a class="nav-link" href="drinks.html">Grid System</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  </header>
+  <main>
+    <aside>
+        <h2>Overview</h2>
+        <p>My project will be a helpful tool for users to navigate the coffee scene and find the best options available.</p> 
+        <h3>Site Features:</h3>
+            <ul>
+            <li>Best Coffee Drink Option</li>
+            <li>Coffee Shop Options</li>
+            </ul>
+    </aside>
+    <section class="content">
+        <h2>Site Description</h2>
+        <p>As an avid coffee drinker, I'm always looking for innovative ways and opportunities where coffee is put to new use. While coffee may be a necessity for many, I want to explore the fun ways that coffee can be found. In many cultures, it is a focal point of connection and social gatherings with cafes and coffee shops being open all throughout the day and night. Its use in American society takes a slightly different route with coffee initially just being seen as being a necessity for providing caffeine to a working individual. With the third and second wave of coffee culture a more exploratory approach is obvious with a focus on high quality beans and flavors.</p>
+        <p>My site will explore coffee history and culture to provide this as a resource for others interested and are looking to learn more. It will include the below pages: </p>
+          <div class="image-container">
+          <img src="images/coffee-beans-top-view-background.jpg" alt="coffee beans">
+              <ul>
+              <li>History of coffee in the US</li>
+              <li>Comparison of coffee culture here and in other areas</li>
+              <li>Types of coffee drinks found</li>
+              <li>Coffee shop options</li>
+            </ul>
+          </div>
+          <p> The site will have features that allows for comparison of coffee drinks, a feature that will present which drink best fits the users needs, and a map pulling coffee shops. The map pulling coffee shop options will be using Google Maps API and will be embedded in the site. I'm hoping that by building this site I will be able to provide a place for new coffee lovers or long time coffee drinkers to find new ways and coffee options available. WA state in particular has a large coffee culture that can be overwhelming to a new user. This site will make it easier to learn all about coffee and will help direct users to a new drink they can try at a local coffee shop.</p>
+        </section>
+  </main>
+  <footer>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="history.html">Images</a></li>
+                <li class="nav-item"><a class="nav-link" href="comparison.html">Accordion</a></li>
+                <li class="nav-item"><a class="nav-link" href="drinks.html">Grid System</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <p>© 2024 Coffee, LLC | Seattle, WA</p>
+  </footer>
+</body>
 </html>
